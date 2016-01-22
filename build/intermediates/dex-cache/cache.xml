@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\androidStudio_workspace\TrackMeNow\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="D:\androidStudio_workspace\TrackMeNow\app\build\intermediates\pre-dexed\debug\internal_impl-23.1.1-9769a4bad4fa01bcaf64a39f56169fd0f0e9d8c2.jar" />
+    </item>
+    <item
+        jar="C:\Users\adslo\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.2.2\d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b\jackson-core-2.2.2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d20be6a5ddd6f8cfd36ebf6dea329873a1c41f1b">
+        <dex dex="D:\androidStudio_workspace\TrackMeNow\app\build\intermediates\pre-dexed\debug\jackson-core-2.2.2-fc74b8830d910a1650508a60a1cdf97cfceb880e.jar" />
+    </item>
+    <item
+        jar="D:\ADT\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="D:\androidStudio_workspace\TrackMeNow\app\build\intermediates\pre-dexed\debug\support-annotations-23.1.1-cc8f81f10dcb050ee97c1bb7f00971b8755312df.jar" />
+    </item>
+    <item
+        jar="C:\Users\adslo\.gradle\caches\modules-2\files-2.1\com.firebase\firebase-client-jvm\2.4.0\558e074f136fee609b8758480ecd00e286595137\firebase-client-jvm-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="558e074f136fee609b8758480ecd00e286595137">
+        <dex dex="D:\androidStudio_workspace\TrackMeNow\app\build\intermediates\pre-dexed\debug\firebase-client-jvm-2.4.0-9930febe5c593792772d81ebe165870385d990c7.jar" />
+    </item>
+    <item
+        jar="C:\Users\adslo\.gradle\caches\modules-2\files-2.1\com.firebase\firebase-client-android\2.4.0\f00bc767918ad9c89e5c13e25706d033a58e13c2\firebase-client-android-2.4.0.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="f00bc767918ad9c89e5c13e25706d033a58e13c2">
+        <dex dex="D:\androidStudio_workspace\TrackMeNow\app\build\intermediates\pre-dexed\debug\firebase-client-android-2.4.0-6325a338037991328f275a89aa6fb49fe8bc9720.jar" />
+    </item>
+    <item
+        jar="D:\androidStudio_workspace\TrackMeNow\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="D:\androidStudio_workspace\TrackMeNow\app\build\intermediates\pre-dexed\debug\classes-04e03740ab80855da0f6a52fed3054913fca3bd9.jar" />
+    </item>
+    <item
+        jar="C:\Users\adslo\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.2.2\285cb9c666f0f0f3dd8a1be04e1f457eb7b15113\jackson-annotations-2.2.2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="285cb9c666f0f0f3dd8a1be04e1f457eb7b15113">
+        <dex dex="D:\androidStudio_workspace\TrackMeNow\app\build\intermediates\pre-dexed\debug\jackson-annotations-2.2.2-23853c01e2391100c482327e65b7b8151bbe511e.jar" />
+    </item>
+    <item
+        jar="C:\Users\adslo\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.2.2\3c8f6018eaa72d43b261181e801e6f8676c16ef6\jackson-databind-2.2.2.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="3c8f6018eaa72d43b261181e801e6f8676c16ef6">
+        <dex dex="D:\androidStudio_workspace\TrackMeNow\app\build\intermediates\pre-dexed\debug\jackson-databind-2.2.2-aa5a44faa31461299832474f1e467a4311845d2d.jar" />
+    </item>
+    <item
+        jar="C:\Users\adslo\.gradle\caches\modules-2\files-2.1\com.firebase\tubesock\0.0.12\6ec0bbd3e161a73ed672284b587fd32309a86d7a\tubesock-0.0.12.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="6ec0bbd3e161a73ed672284b587fd32309a86d7a">
+        <dex dex="D:\androidStudio_workspace\TrackMeNow\app\build\intermediates\pre-dexed\debug\tubesock-0.0.12-e020cf4b0edfe5df0d242eeda1bbf2148debe42a.jar" />
+    </item>
+
+</items>

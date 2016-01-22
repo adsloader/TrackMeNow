@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>OpenLayers Simplest Example</title>
+</head>
+<body>
+<div id="Map" style="height:650px"></div>
+<script src="http://openlayers.org/api/OpenLayers.js"></script>
+<script>
+     
+    //  map 개체생성 및 Base 맵인 Open Street Map으로 설정 
+	var map      = new OpenLayers.Map("Map");
+	var mapnik   = new OpenLayers.Layer.OSM();
+	map.addLayer(mapnik);
+	
+	// 마커개체 생성
+	var size = new OpenLayers.Size(21,25);
+    var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
+    var icon = new OpenLayers.Icon('https://lh6.ggpht.com/ujg90CKMD0bvAmBFw3b-24wgIr0pAex_sG_HPF5SAXL8Okk9ZhGE5LAve6pfN8JD5NM', size, offset);
+
+	var markers = new OpenLayers.Layer.Markers( "Markers" );
+	map.addLayer(markers);
+	
+	// 마커를 찍어주는 함수(Android에서 호출할 것임)
+    function addMarker(x, y){
+	    
+		var lat            = x;
+		var lon          = y;
+		var zoom       = 17;
+		
+		var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
+	    var toProjection   = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
+	    var position        = new OpenLayers.LonLat(lon, lat).transform( fromProjection, toProjection);
+
+	    // 모든 마커를 지워버린다.
+	    markers.clearMarkers();
+	
+		markers.addMarker(new OpenLayers.Marker(position, icon));
+		map.setCenter(position, zoom);
+	 
+	}
+
+</script>
+
+</body>
+</html>

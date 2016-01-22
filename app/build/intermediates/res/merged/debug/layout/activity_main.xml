@@ -1,0 +1,44 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    tools:context="com.example.socketio.MainActivity"
+    android:orientation="vertical">
+
+    <WebView
+        android:id="@+id/wbMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.1"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:weightSum="1"
+        android:layout_weight="0.9"
+        android:layout_height="match_parent">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5"
+            android:text="Track me!"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/btnTrackMe" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.5"
+            android:text="Observer"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/btnObserver" />
+    </LinearLayout>
+
+</LinearLayout>
+<!-- From: file:/D:/androidStudio_workspace/TrackMeNow/app/src/main/res/layout/activity_main.xml -->
