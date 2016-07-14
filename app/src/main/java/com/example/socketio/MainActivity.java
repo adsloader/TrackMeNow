@@ -1,12 +1,19 @@
 package com.example.socketio;
 
+import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -23,14 +30,56 @@ import java.util.Map;
 public class MainActivity extends Activity {
 
     Firebase myFirebaseRef = null;
+    private static final int PERMISSION_REQUEST_COARSE_LOCATION = 1;
 
-	@Override
+    // 롤리팝의 퍼미션용
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+        switch (requestCode) {
+            case PERMISSION_REQUEST_COARSE_LOCATION: {
+                if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Log.d("AAAA", "coarse location permission granted");
+                } else {
+                    final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                    builder.setTitle("Functionality limited");
+                    builder.setMessage("Since location access has not been granted, this app will not be able to discover beacons when in the background.");
+                    builder.setPositiveButton(android.R.string.ok, null);
+                    builder.setOnDismissListener(new DialogInterface.OnDismissListener() {
+
+                        @Override
+                        public void onDismiss(DialogInterface dialog) {
+                        }
+
+                    });
+                    builder.show();
+                }
+                return;
+            }
+        }
+    }
+
+    @Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
+        setGPSPemission();
         initFireBase();
 		setUI();
+    }
+
+    // 롤리팝을 위한 메소드
+    private void setGPSPemission() {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION)
+                != PackageManager.PERMISSION_GRANTED) {
+
+            if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                requestPermissions(
+                        new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},
+                        PERMISSION_REQUEST_COARSE_LOCATION);
+
+            }
+        }
     }
 
     private void initFireBase(){
@@ -38,7 +87,9 @@ public class MainActivity extends Activity {
         Firebase.setAndroidContext(this);
 
         // 박모씨 아들의 파이어베이스 계정입니다.
-        myFirebaseRef = new Firebase("https://glowing-torch-2311.firebaseio.com/");
+        //myFirebaseRef = new Firebase("https://glowing-torch-2311.firebaseio.com/");
+        myFirebaseRef = new Firebase("https://testandroid-d79e4.firebaseio.com/");
+
     }
 
     // firebase 개체를 설정한다.
